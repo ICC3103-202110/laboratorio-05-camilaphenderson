@@ -26,7 +26,7 @@ function createTable(model){
         ];
 
 }
- //Add validation *********************************************************************
+//Add validate ***********************************************************************************
 function input(model){
     const {bill} = model
     const {percentage} = model
