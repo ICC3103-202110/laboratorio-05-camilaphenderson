@@ -19,8 +19,10 @@ function updateModel(realBill,realPercentage,model){
         percentage: realPercentage,
         tip : newTip(realBill,realPercentage),
         total : newTotal(realBill,realPercentage)
-
-
     }
 
+}
+
+module.exports = {
+    updateModel
 }
