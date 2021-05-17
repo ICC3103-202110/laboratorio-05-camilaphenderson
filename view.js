@@ -7,8 +7,9 @@ function createTitle(){
         figlet.textSync(
             'Tip Calculator',
             {
-                horizontallayout : 'full',
-                font = 'Nancyj-Fancy'
+                horizontalLayout: 'full',
+                verticallayout : 'universal smushing',
+                font : 'Avatar',
             }
         )
     )
