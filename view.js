@@ -1,6 +1,7 @@
 const figlet = require('figlet')
 const chalk = require('chalk')
 const { fonts } = require('figlet')
+const { printTable } = require('console-table-printer');
 
 function createTitle(){
     return chalk.yellow(
@@ -13,6 +14,17 @@ function createTitle(){
             }
         )
     )
+}
+
+function createTable(model){
+    const{bill} = model
+    const{percentage} = model
+    const{tip} = model
+    const{total} = model
+    return [
+            {'Bill ': bill,'Percentage': percentage+'%','Tip':'$'+tip,'Total':'$'+total}
+        ];
+
 }
 
 module.exports = {
