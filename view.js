@@ -27,6 +27,27 @@ function createTable(model){
 
 }
 
+function input(model){
+    const {bill} = model
+    const {percentage} = model
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'bill',
+            message: 'How much is your bill?',
+            default: bill,
+        },
+        {
+            type: 'input',
+            name:'percentage',
+            message: 'What percentage do you want as a tip?',
+            default: percentage,
+            
+        },
+    ])
+}
+
+
 module.exports = {
     createTitle
 }
