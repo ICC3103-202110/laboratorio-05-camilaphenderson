@@ -36,14 +36,28 @@ function input(model){
             name: 'bill',
             message: 'How much is your bill?',
             default: bill,
+            validate: function(value){
+                if(isNaN(value) === true ){
+                    return `This must be a number`
+                } else {
+                    return true
+                }
+            }
+
         },
         {
             type: 'input',
             name:'percentage',
             message: 'What percentage do you want to give as a tip?',
             default: percentage,
-            
-        },
+            validate: function(value){
+                if(value < '100' || value > '0'){
+                    return true
+                } else {
+                    return 'Please enter a valid number, between 0 and 100'
+                }   
+            } 
+        }
     ])
 }
 
