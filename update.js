@@ -2,7 +2,7 @@
 //Avoid infinite numbers --> add something to round up to 2 or 3 decimals*****************************
 function newTip(realBill,realPercentage){
     const newTip1 = realBill * (realPercentage/100)
-    return newTip1
+    return Math.round(newTip1 * 100) / 100
 }
 
 function newTotal(realBill,realPercentage){
