@@ -1,8 +1,17 @@
-const {createTitle} = require('./view')
+const {input} = require('./view')
+const { printTable } = require('console-table-printer');
 
-function app(state,update,view){
+//Imp
+async function app(state,update,view){
+    const {model, currentView} = state
+    const {table,title} = currentView
     console.clear()
-    console.log(createTitle())
+    //show title and table
+    console.log(title)
+    printTable(table)
+    //
+    //const {bill,percentage} = await input(model)
+
 
 }
 module.exports = {
