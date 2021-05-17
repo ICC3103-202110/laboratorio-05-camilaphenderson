@@ -1,6 +1,7 @@
 const figlet = require('figlet')
 const chalk = require('chalk')
 const { fonts } = require('figlet')
+const inquirer = require('inquirer')
 
 function createTitle(){
     return chalk.yellow(
@@ -39,7 +40,7 @@ function input(model){
         {
             type: 'input',
             name:'percentage',
-            message: 'What percentage do you want as a tip?',
+            message: 'What percentage do you want to give as a tip?',
             default: percentage,
             
         },

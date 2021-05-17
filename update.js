@@ -6,11 +6,11 @@ function newTip(realBill,realPercentage){
 }
 
 function newTotal(realBill,realPercentage){
-    const newTotal1 = bill + newTip(realBill,realPercentage)
+    const newTotal1 = (+realBill + + newTip(realBill,realPercentage))
     return newTotal1
 }
 
-function updateModel(realBill,realPercentage,model){
+function update(realBill,realPercentage,model){
     const {tip} = model
     const {total} = model
     return {
@@ -24,5 +24,6 @@ function updateModel(realBill,realPercentage,model){
 }
 
 module.exports = {
-    updateModel
+    update,
+
 }
