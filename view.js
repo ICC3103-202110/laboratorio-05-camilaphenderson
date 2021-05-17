@@ -47,7 +47,14 @@ function input(model){
     ])
 }
 
+function view(model){
+    title : createTitle()
+    table : createTable(model)
+
+}
+
 
 module.exports = {
-    createTitle
+    view,
+    input 
 }
