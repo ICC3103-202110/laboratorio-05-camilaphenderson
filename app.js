@@ -10,8 +10,15 @@ async function app(state,update,view){
     console.log(title)
     printTable(table)
     //
-    //const {bill,percentage} = await input(model)
+    const {bill,percentage} = await input(model)
+    const newModel = updateModel(bill,percentage,model)
+    state = {
+        ...state,
+        model : newModel,
+        currentView : view(newModel),
+        
 
+    }
 
 }
 module.exports = {
